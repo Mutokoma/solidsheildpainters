@@ -1,3 +1,344 @@
+[index.html.html](https://github.com/user-attachments/files/27861020/index.html.html)
 # solidsheildpainters
 your all-in-one partner for residential transformation and full estate property maintenance. Delivering industrial grade accuracy accross zambia
-[Solid_Shield_Painters_Official_Catalog.PDF](https://github.com/user-attachments/files/27860993/Solid_Shield_Painters_Official_Catalog.PDF)
+[Solid_Shield_Painters_Official_Catalog.PDF](https://github.com/user-attachments/files/27860993/Solid_Shield_Painters_Official_Catalog.PDF)<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  New Content
+</body>
+</html> 
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solid Shield Painters & Property Services</title>
+    <style>
+        /* Modern CSS Variables for Brand Alignment */
+        :root {
+            --primary: #1a365d;
+            --accent: #d69e2e;
+            --light-bg: #f7fafc;
+            --dark-text: #2d3748;
+            --light-text: #ffffff;
+            --gray-border: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: var(--dark-text);
+            line-height: 1.6;
+            background-color: #ffffff;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--primary);
+            color: var(--light-text);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            border-left: 4px solid var(--accent);
+            padding-left: 10px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .contact-btn {
+            background-color: var(--accent);
+            color: var(--primary);
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        .contact-btn:hover {
+            background-color: var(--light-text);
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(26, 54, 93, 0.95)), url('https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            color: var(--light-text);
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+            color: #e2e8f0;
+        }
+
+        .badge-price {
+            display: inline-block;
+            background-color: rgba(214, 158, 46, 0.2);
+            border: 2px solid var(--accent);
+            color: var(--accent);
+            padding: 12px 24px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        /* Core Containers */
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent);
+            margin: 10px auto 0 auto;
+        }
+
+        /* Services Grid Layout */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: var(--light-bg);
+            border: 1px solid var(--gray-border);
+            border-radius: 6px;
+            padding: 25px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #4a5568;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .card .price {
+            font-weight: bold;
+            color: #2b6cb0;
+            background-color: #ebf8ff;
+            padding: 6px 12px;
+            border-radius: 4px;
+            align-self: flex-start;
+            font-size: 0.9rem;
+        }
+
+        /* Banner Guarantee */
+        .guarantee-banner {
+            background-color: var(--primary);
+            color: var(--light-text);
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .guarantee-banner h3 {
+            color: var(--accent);
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        /* Footer & Direct Action */
+        footer {
+            background-color: #112240;
+            color: var(--light-text);
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 4px solid var(--accent);
+        }
+
+        .footer-contacts {
+            margin: 20px 0;
+        }
+
+        .footer-contacts a {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 0 15px;
+            display: inline-block;
+        }
+
+        .footer-contacts p {
+            margin-top: 10px;
+            color: #a0aec0;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-container { flex-direction: column; gap: 15px; }
+            .footer-contacts a { display: block; margin: 10px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">SOLID SHIELD <span>SERVICES</span></div>
+            <a href="tel:+260977200347" class="contact-btn">Call Now</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="badge-price">Painting Starts From K7 / m²</div>
+        <h1>Solid Shield Painters &amp; Property Services</h1>
+        <p>Premium Structural Finishes, Turnkey Handyman Work, Deep Sanitation, and Full Estate Ground Maintenance Solutions in Zambia.</p>
+        <a href="https://wa.me/260977200347" class="contact-btn" style="background-color: #25D366; color: white;">Chat on WhatsApp</a>
+    </section>
+
+    <section class="section-container">
+        <h2 class="section-title">1. Painting &amp; Structural Finishes</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Interior Wall Painting</h3>
+                <p>Complete wall preparation, scraping, line masking, and application of smooth domestic acrylic emulsion layers.</p>
+                <div class="price">K7 / m²</div>
+            </div>
+            <div class="card">
+                <h3>Ceiling Board Treatment</h3>
+                <p>Joint sanding, clean board line definitions, and uniform application of dead-white ceiling matte protective coats.</p>
+                <div class="price">K7 / m²</div>
+            </div>
+            <div class="card">
+                <h3>Exterior Weather-Shield</h3>
+                <p>Anti-fungal chemical washdown, surface micro-fissure prep, and dual-layer flexible exterior weatherguard application.</p>
+                <div class="price">K45 / m²</div>
+            </div>
+            <div class="card">
+                <h3>Roof Sealing &amp; Restoration</h3>
+                <p>Mechanical wire-brushing, complete anti-rust priming, and premium high-durability acrylic roof paint coatings.</p>
+                <div class="price">K40 / m²</div>
+            </div>
+            <div class="card">
+                <h3>Advanced Damp-Proofing</h3>
+                <p>Plaster stripping to bare brick structures, chemical damp injection barriers, and salt-neutralizing treatment coatings.</p>
+                <div class="price">K120 / m²</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-container" style="background-color: var(--light-bg); max-width: 100%;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <h2 class="section-title">2. Property Care &amp; Handyman</h2>
+            <div class="grid">
+                <div class="card" style="background: white;">
+                    <h3>Furniture Assembly</h3>
+                    <p>Unboxing, blueprint alignment, and rapid structural assembly of flat-pack furniture (wardrobes, bed systems, office setups).</p>
+                    <div class="price">From K250 / item</div>
+                </div>
+                <div class="card" style="background: white;">
+                    <h3>Shelf Fitting &amp; Installation</h3>
+                    <p>Laser-aligned wall mounting of structural floating shelves, garage storage racks, and custom display layout brackets.</p>
+                    <div class="price">From K150 / line</div>
+                </div>
+                <div class="card" style="background: white;">
+                    <h3>Full House Deep Cleaning</h3>
+                    <p>Top-to-bottom sanitation, window glass squeegee cleans, mechanical floor scrubs, and comprehensive post-construction cleaning.</p>
+                    <div class="price">From K800</div>
+                </div>
+                <div class="card" style="background: white;">
+                    <h3>General Yard Maintenance</h3>
+                    <p>Routine ground clearing: precision lawn mowing, edge trimming, aggressive weed removal, and systematic organic waste haulage.</p>
+                    <div class="price">K350 / run</div>
+                </div>
+                <div class="card" style="background: white;">
+                    <h3>Back Yard Gardening Set Up</h3>
+                    <p>Custom garden builds: mechanical tilling, fertilizer mixing, cultivation beds, and vegetable layout configurations.</p>
+                    <div class="price">Custom Quote</div>
+                </div>
+                <div class="card" style="background: white;">
+                    <h3>Drainage Unblocking</h3>
+                    <p>High-pressure domestic waste line flushes, stormwater clearings, grease trap overhauls, and structural sludge extractions.</p>
+                    <div class="price">From K600</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="guarantee-banner">
+        <h3>The Solid Shield Structural Guarantee</h3>
+        <p>Single-point contract tracking, insured operators, and immaculate finishing metrics across all properties.</p>
+    </div>
+
+    <footer>
+        <h2>Get a Free On-Site Valuation Today</h2>
+        <div class="footer-contacts">
+            <a href="tel:+260977200347">📞 +260 97 7200347</a>
+            <a href="mailto:solidsheildpainters@gmail.com">✉️ solidsheildpainters@gmail.com</a>
+            <p style="margin-top: 20px;">Operational Scope: Residential Estates, Commercial Hubs &amp; Private Plots across Zambia.</p>
+        </div>
+        <p style="font-size: 0.85rem; color: #718096; margin-top: 30px;">&copy; 2026 Solid Shield Painters &amp; Property Services. Built on Quality, Bound by Trust.</p>
+    </footer>
+
+</body>
+</html>
+
