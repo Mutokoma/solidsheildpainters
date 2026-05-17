@@ -1,3 +1,4 @@
+
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,14 +7,14 @@
   New Content
 </body>
 </html> 
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solid Shield Painters & Property Services</title>
     <style>
-        /* Modern CSS Variables for Brand Alignment */
+        /* Corporate Branding CSS Variables */
         :root {
             --primary: #1a365d;
             --accent: #d69e2e;
@@ -36,7 +37,7 @@
             background-color: #ffffff;
         }
 
-        /* Header & Navigation */
+        /* Fixed Navigation */
         header {
             background-color: var(--primary);
             color: var(--light-text);
@@ -56,16 +57,15 @@
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: bold;
             letter-spacing: 1px;
             border-left: 4px solid var(--accent);
             padding-left: 10px;
+            text-transform: uppercase;
         }
 
-        .logo span {
-            color: var(--accent);
-        }
+        .logo span { color: var(--accent); }
 
         .contact-btn {
             background-color: var(--accent);
@@ -82,40 +82,29 @@
             color: var(--primary);
         }
 
-        /* Hero Section */
+        /* Hero Image Panel */
         .hero {
             background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(26, 54, 93, 0.95)), url('https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
             color: var(--light-text);
             text-align: center;
-            padding: 100px 20px;
+            padding: 90px 20px;
         }
 
         .hero h1 {
             font-size: 2.8rem;
             margin-bottom: 15px;
             text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .hero p {
             font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 30px auto;
+            max-width: 750px;
+            margin: 0 auto 35px auto;
             color: #e2e8f0;
         }
 
-        .badge-price {
-            display: inline-block;
-            background-color: rgba(214, 158, 46, 0.2);
-            border: 2px solid var(--accent);
-            color: var(--accent);
-            padding: 12px 24px;
-            font-size: 1.3rem;
-            font-weight: bold;
-            border-radius: 4px;
-            margin-bottom: 20px;
-        }
-
-        /* Core Containers */
+        /* Section Frameworks */
         .section-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -128,7 +117,6 @@
             color: var(--primary);
             margin-bottom: 40px;
             text-transform: uppercase;
-            position: relative;
         }
 
         .section-title::after {
@@ -140,33 +128,47 @@
             margin: 10px auto 0 auto;
         }
 
-        /* Services Grid Layout */
+        /* Service Cards Dynamic Grid */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
         }
 
         .card {
-            background-color: var(--light-bg);
+            background-color: #ffffff;
             border: 1px solid var(--gray-border);
-            border-radius: 6px;
-            padding: 25px;
-            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 8px;
+            overflow: hidden;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
         }
 
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.06);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background-color: #cbd5e0;
+        }
+
+        .card-content {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
         }
 
         .card h3 {
             color: var(--primary);
             font-size: 1.3rem;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .card p {
@@ -174,44 +176,118 @@
             color: #4a5568;
             margin-bottom: 20px;
             flex-grow: 1;
+            text-align: justify;
         }
 
         .card .price {
             font-weight: bold;
             color: #2b6cb0;
             background-color: #ebf8ff;
-            padding: 6px 12px;
+            padding: 8px 16px;
             border-radius: 4px;
             align-self: flex-start;
-            font-size: 0.9rem;
+            font-size: 1rem;
+            border: 1px solid #bee3f8;
         }
 
-        /* Banner Guarantee */
+        /* Trust Banner */
         .guarantee-banner {
             background-color: var(--primary);
             color: var(--light-text);
-            padding: 40px 20px;
+            padding: 45px 20px;
             text-align: center;
-            margin-top: 40px;
         }
 
         .guarantee-banner h3 {
             color: var(--accent);
             margin-bottom: 10px;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
+            text-transform: uppercase;
         }
 
-        /* Footer & Direct Action */
+        .guarantee-banner p {
+            max-width: 600px;
+            margin: 0 auto;
+            color: #e2e8f0;
+        }
+
+        /* Interactive Admin Overlay Modal */
+        #adminModal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.75);
+            z-index: 2000;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        .admin-content {
+            background: white;
+            max-width: 750px;
+            margin: 30px auto;
+            padding: 35px;
+            border-radius: 8px;
+            position: relative;
+            box-shadow: 0 20px 25px rgba(0,0,0,0.15);
+        }
+
+        .close-admin {
+            position: absolute;
+            top: 15px; right: 20px;
+            font-size: 1.8rem; cursor: pointer; color: #a0aec0;
+        }
+
+        .admin-row {
+            border-bottom: 1px solid var(--gray-border);
+            padding: 20px 0;
+        }
+
+        .admin-row h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .admin-inputs {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+
+        .admin-inputs input, .admin-inputs textarea {
+            padding: 10px;
+            border: 1px solid var(--gray-border);
+            border-radius: 4px;
+            flex: 1;
+            min-width: 200px;
+            font-size: 0.95rem;
+        }
+
+        .save-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .save-btn:hover { background: #1a2a4a; }
+
+        /* Footer Infrastructure */
         footer {
             background-color: #112240;
             color: var(--light-text);
-            padding: 40px 20px;
+            padding: 50px 20px;
             text-align: center;
             border-top: 4px solid var(--accent);
         }
 
         .footer-contacts {
-            margin: 20px 0;
+            margin-bottom: 25px;
         }
 
         .footer-contacts a {
@@ -219,21 +295,25 @@
             text-decoration: none;
             font-size: 1.2rem;
             font-weight: bold;
-            margin: 0 15px;
+            margin: 0 20px;
             display: inline-block;
         }
 
         .footer-contacts p {
-            margin-top: 10px;
+            margin-top: 15px;
             color: #a0aec0;
+            font-size: 0.95rem;
         }
 
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            .nav-container { flex-direction: column; gap: 15px; }
-            .footer-contacts a { display: block; margin: 10px 0; }
+        .admin-login-link {
+            display: inline-block;
+            margin-top: 25px;
+            color: #4a5568;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.2s;
         }
+        .admin-login-link:hover { color: var(--accent); }
     </style>
 </head>
 <body>
@@ -246,84 +326,35 @@
     </header>
 
     <section class="hero">
-        <div class="badge-price">Painting Starts From K7 / m²</div>
         <h1>Solid Shield Painters &amp; Property Services</h1>
-        <p>Premium Structural Finishes, Turnkey Handyman Work, Deep Sanitation, and Full Estate Ground Maintenance Solutions in Zambia.</p>
-        <a href="https://wa.me/260977200347" class="contact-btn" style="background-color: #25D366; color: white;">Chat on WhatsApp</a>
+        <p>Premium Surface Finishes, Turnkey Handyman Work, Deep Sanitation, and Complete Outdoor Infrastructure Care across Zambia.</p>
+        <a href="https://wa.me/260977200347" class="contact-btn" style="background-color: #25D366; color: white; border: none;">Chat on WhatsApp</a>
     </section>
 
     <section class="section-container">
-        <h2 class="section-title">1. Painting &amp; Structural Finishes</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Interior Wall Painting</h3>
-                <p>Complete wall preparation, scraping, line masking, and application of smooth domestic acrylic emulsion layers.</p>
-                <div class="price">K7 / m²</div>
-            </div>
-            <div class="card">
-                <h3>Ceiling Board Treatment</h3>
-                <p>Joint sanding, clean board line definitions, and uniform application of dead-white ceiling matte protective coats.</p>
-                <div class="price">K7 / m²</div>
-            </div>
-            <div class="card">
-                <h3>Exterior Weather-Shield</h3>
-                <p>Anti-fungal chemical washdown, surface micro-fissure prep, and dual-layer flexible exterior weatherguard application.</p>
-                <div class="price">K45 / m²</div>
-            </div>
-            <div class="card">
-                <h3>Roof Sealing &amp; Restoration</h3>
-                <p>Mechanical wire-brushing, complete anti-rust priming, and premium high-durability acrylic roof paint coatings.</p>
-                <div class="price">K40 / m²</div>
-            </div>
-            <div class="card">
-                <h3>Advanced Damp-Proofing</h3>
-                <p>Plaster stripping to bare brick structures, chemical damp injection barriers, and salt-neutralizing treatment coatings.</p>
-                <div class="price">K120 / m²</div>
-            </div>
-        </div>
+        <h2 class="section-title">1. Painting &amp; Surface Treatments</h2>
+        <div class="grid" id="paintingDisplayGrid"></div>
     </section>
 
     <section class="section-container" style="background-color: var(--light-bg); max-width: 100%;">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <div style="max-width: 1200px; margin: 0 auto;">
             <h2 class="section-title">2. Property Care &amp; Handyman</h2>
-            <div class="grid">
-                <div class="card" style="background: white;">
-                    <h3>Furniture Assembly</h3>
-                    <p>Unboxing, blueprint alignment, and rapid structural assembly of flat-pack furniture (wardrobes, bed systems, office setups).</p>
-                    <div class="price">From K250 / item</div>
-                </div>
-                <div class="card" style="background: white;">
-                    <h3>Shelf Fitting &amp; Installation</h3>
-                    <p>Laser-aligned wall mounting of structural floating shelves, garage storage racks, and custom display layout brackets.</p>
-                    <div class="price">From K150 / line</div>
-                </div>
-                <div class="card" style="background: white;">
-                    <h3>Full House Deep Cleaning</h3>
-                    <p>Top-to-bottom sanitation, window glass squeegee cleans, mechanical floor scrubs, and comprehensive post-construction cleaning.</p>
-                    <div class="price">From K800</div>
-                </div>
-                <div class="card" style="background: white;">
-                    <h3>General Yard Maintenance</h3>
-                    <p>Routine ground clearing: precision lawn mowing, edge trimming, aggressive weed removal, and systematic organic waste haulage.</p>
-                    <div class="price">K350 / run</div>
-                </div>
-                <div class="card" style="background: white;">
-                    <h3>Back Yard Gardening Set Up</h3>
-                    <p>Custom garden builds: mechanical tilling, fertilizer mixing, cultivation beds, and vegetable layout configurations.</p>
-                    <div class="price">Custom Quote</div>
-                </div>
-                <div class="card" style="background: white;">
-                    <h3>Drainage Unblocking</h3>
-                    <p>High-pressure domestic waste line flushes, stormwater clearings, grease trap overhauls, and structural sludge extractions.</p>
-                    <div class="price">From K600</div>
-                </div>
-            </div>
+            <div class="grid" id="propertyDisplayGrid"></div>
         </div>
     </section>
 
     <div class="guarantee-banner">
         <h3>The Solid Shield Structural Guarantee</h3>
-        <p>Single-point contract tracking, insured operators, and immaculate finishing metrics across all properties.</p>
+        <p>Single-point account tracking, insured onsite teams, and pristine corporate structural finishes across every private assignment.</p>
+    </div>
+
+    <div id="adminModal">
+        <div class="admin-content">
+            <span class="close-admin" onclick="toggleAdminModal()">&times;</span>
+            <h2 style="color: var(--primary); margin-bottom: 15px; border-bottom: 3px solid var(--accent); padding-bottom: 10px; text-transform: uppercase;">Manager Dashboard</h2>
+            <p style="font-size: 0.9rem; color: #718096; margin-bottom: 25px;">Modify running values, alter text boxes, or change service images below. Edits commit instantly to the browser storage framework.</p>
+            <div id="adminFormContainer"></div>
+        </div>
     </div>
 
     <footer>
@@ -331,10 +362,121 @@
         <div class="footer-contacts">
             <a href="tel:+260977200347">📞 +260 97 7200347</a>
             <a href="mailto:solidsheildpainters@gmail.com">✉️ solidsheildpainters@gmail.com</a>
-            <p style="margin-top: 20px;">Operational Scope: Residential Estates, Commercial Hubs &amp; Private Plots across Zambia.</p>
+            <p>Operational Scope: Residential Estates, Commercial Hubs &amp; Private Plots across Zambia.</p>
         </div>
-        <p style="font-size: 0.85rem; color: #718096; margin-top: 30px;">&copy; 2026 Solid Shield Painters &amp; Property Services. Built on Quality, Bound by Trust.</p>
+        <p style="font-size: 0.85rem; color: #718096;">&copy; 2026 Solid Shield Painters &amp; Property Services. Built on Quality, Bound by Trust.</p>
+        <a href="#" class="admin-login-link" onclick="toggleAdminModal()">🔒 Admin Settings Panel</a>
     </footer>
 
+    <script>
+        // Default consolidated master array reflecting values from catalog v7
+        const initialCatalogDataset = [
+            { id: 0, category: "painting", title: "Interior Wall Painting", desc: "Complete wall preparation, scraping, line masking, and application of smooth domestic acrylic emulsion. Excluding large open apertures.", price: "K7 / m²", img: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=400&q=80" },
+            { id: 1, category: "painting", title: "Ceiling Board Treatment", desc: "Joint sanding, clean board line definitions, and uniform application of dead white ceiling matte coats.", price: "K7 / m²", img: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=400&q=80" },
+            { id: 2, category: "painting", title: "Exterior Weather-Shield", desc: "Anti-fungal washdown, surface micro-fissure preparation, and dual-layer flexible exterior weatherguard application.", price: "K45 / m²", img: "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=400&q=80" },
+            { id: 3, category: "painting", title: "Roof Sealing & Restoration", desc: "Mechanical wire-brushing, anti-rust priming, and premium high-durability protective roof paint coatings.", price: "K40 / m²", img: "https://images.unsplash.com/photo-1628745277862-bc0f2d6ff17c?auto=format&fit=crop&w=400&q=80" },
+            { id: 4, category: "painting", title: "Advanced Damp-Proofing", desc: "Plaster stripping to bare brick, chemical damp injection barriers, and salt-neutralizing treatment coatings.", price: "K120 / m²", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=400&q=80" },
+            { id: 5, category: "property", title: "Furniture Assembly", desc: "Unboxing, layout, and structural assembly of flat-pack furniture (wardrobes, beds, desks, entertainment units). Perfect alignment check.", price: "From K250 / item", img: "https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=400&q=80" },
+            { id: 6, category: "property", title: "Shelf Fitting & Installation", desc: "Laser-aligned wall mounting of floating shelves, garage racks, kitchen installations, and utility storage brackets.", price: "From K150 / line", img: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=400&q=80" },
+            { id: 7, category: "property", title: "Full House Deep Cleaning", desc: "Top-to-bottom cleanup: high-level dusting, window glass squeegee wash, mechanical floor scrubbing, kitchen degreasing, and bathroom scale removal.", price: "From K800", img: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=400&q=80" },
+            { id: 8, category: "property", title: "General Back Yard Maintenance", desc: "Routine ground care: precision lawn mowing, boundary edge trimming, weed clearing, hedge shaping, and green waste haulage.", price: "K350 / run", img: "https://images.unsplash.com/photo-1592417817098-8f3d6eb18865?auto=format&fit=crop&w=400&q=80" },
+            { id: 9, category: "property", title: "Back Yard Gardening Set Up", desc: "Custom plot setup: mechanical soil tilling, organic fertilizer blending, garden bed creation, and decorative or vegetable configuration.", price: "Custom Quote", img: "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=400&q=80" },
+            { id: 10, category: "property", title: "Drainage Unblocking", desc: "Mechanical line clearing: high-pressure flushing of domestic sewer pipes, clearing stormwater lines, and grease trap debris clearing.", price: "From K600", img: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=400&q=80" }
+        ];
+
+        // Read operational database array from system cache memory or write fallback defaults
+        let masterCatalogData = JSON.parse(localStorage.getItem('solidShieldMasterCache')) || initialCatalogDataset;
+
+        // Pull array items apart into separate layout panels across screen containers
+        function executeInterfaceRender() {
+            const paintingGrid = document.getElementById('paintingDisplayGrid');
+            const propertyGrid = document.getElementById('propertyDisplayGrid');
+            
+            paintingGrid.innerHTML = '';
+            propertyGrid.innerHTML = '';
+
+            masterCatalogData.forEach(item => {
+                const cardTemplate = `
+                    <div class="card">
+                        <img class="card-img" src="${item.img}" alt="${item.title}">
+                        <div class="card-content">
+                            <h3>${item.title}</h3>
+                            <p>${item.desc}</p>
+                            <div class="price">${item.price}</div>
+                        </div>
+                    </div>
+                `;
+                if(item.category === 'painting') {
+                    paintingGrid.innerHTML += cardTemplate;
+                } else {
+                    propertyGrid.innerHTML += cardTemplate;
+                }
+            });
+        }
+
+        // Build administrative form layout fields inside popup settings overlay panel
+        function executeDashboardBuilder() {
+            const container = document.getElementById('adminFormContainer');
+            container.innerHTML = '';
+
+            masterCatalogData.forEach(item => {
+                container.innerHTML += `
+                    <div class="admin-row">
+                        <h4>${item.title} (${item.category.toUpperCase()})</h4>
+                        <div class="admin-inputs">
+                            <input type="text" value="${item.price}" id="priceField-${item.id}" placeholder="Rate Display">
+                            <textarea id="descField-${item.id}" rows="2" placeholder="Scope Specifications">${item.desc}</textarea>
+                        </div>
+                        <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:10px;">
+                            <div style="display:flex; align-items:center; gap:8px;">
+                                <label style="font-size:0.85rem; font-weight:bold; color:#4a5568;">Replace Image:</label>
+                                <input type="file" accept="image/*" onchange="handleImageBufferConversion(event, ${item.id})">
+                            </div>
+                            <button class="save-btn" onclick="commitDashboardChanges(${item.id})">Update Item</button>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        // Convert locally uploaded file selections into string assets for long term retention
+        function handleImageBufferConversion(event, id) {
+            const uploadedFile = event.target.files[0];
+            if (uploadedFile) {
+                const streamReader = new FileReader();
+                streamReader.onload = function(e) {
+                    masterCatalogData.find(x => x.id === id).img = e.target.result;
+                };
+                streamReader.readAsDataURL(uploadedFile);
+            }
+        }
+
+        // Write modified text parameters down directly into local storage matrices
+        function commitDashboardChanges(id) {
+            const record = masterCatalogData.find(x => x.id === id);
+            record.price = document.getElementById(`priceField-${id}`).value;
+            record.desc = document.getElementById(`descField-${id}`).value;
+            
+            localStorage.setItem('solidShieldMasterCache', JSON.stringify(masterCatalogData));
+            executeInterfaceRender();
+            alert(`Saved changes for: ${record.title}`);
+        }
+
+        // Open or close control desk dashboard viewports
+        function toggleAdminModal() {
+            const modal = document.getElementById('adminModal');
+            if(modal.style.display === 'block') {
+                modal.style.display = 'none';
+            } else {
+                executeDashboardBuilder();
+                modal.style.display = 'block';
+            }
+        }
+
+        // Run the rendering engine layout configuration right at startup
+        executeInterfaceRender();
+    </script>
 </body>
 </html>
+
+```
